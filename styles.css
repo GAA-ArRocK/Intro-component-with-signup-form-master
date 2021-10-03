@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+
+    /* ### Primary */
+
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    
+    /* ### Accent */
+    
+    --Blue: hsl(248, 32%, 49%);
+    
+    /* ### Neutral */
+    
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+}
+
+.mainBox {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    background-color: var(--Red);
+    background-image: url("./images/bg-intro-mobile.png");
+    padding: 1.5rem;
+}
+
+.topPart {
+    margin-top: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.topTitle {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.topText {
+    margin-bottom: 3rem;
+}
+
+.tryFree {
+    background-color: var(--Blue);
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    border-radius: 15px;
+    border: 0 solid transparent;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 7px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.tryFree span {
+    font-weight: 700;
+}
+
+/* .tryFree:hover {
+    color: rgb(118, 228, 118);
+    background-color: rgb(118, 228, 118);
+} */
+
+.claimForm {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    box-shadow: 0 7px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.inputGroup {
+    position: relative;
+}
+
+.errorIcon {
+    display: none;
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: 90%;
+    top: 25%;
+    z-index: 100;
+}
+
+.errorIcon.active {
+    display: block;
+}
+
+.claimForm .errorText {
+    display: none;
+    color: var(--Red);
+    font-size: 10px;
+    padding-left: 1rem;
+    font-weight: 700;
+}
+
+.claimForm .errorText.active {
+    display: block;
+}
+
+.claimForm .mainInput {
+    border-radius: 5px;
+    border: 1px solid var(--Grayish-Blue);
+    height: 3rem;
+    width: 100%;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-indent: 1rem;
+}
+
+.claimForm .mainInput::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;;
+}
+
+.claimForm .claimButton {
+    background-color: var(--Green);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    height: 3rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 5px 1px hsl(154, 45%, 51%);
+    cursor: pointer;
+}
+
+.claimFooter {
+    color: var(--Grayish-Blue);
+    text-align: center;
+    font-size: 12px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.claimFooter span {
+    color: var(--Red);
+    font-weight: 700;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

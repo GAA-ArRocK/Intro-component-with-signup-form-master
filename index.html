@@ -5,38 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
+  <div class="mainBox">
+    <div class="topPart">
+      <div class="topTitle">
+        Learn to code by <br> watching others
+      </div>
+      <div class="topText">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </div>
+    </div>
+    <div class="botPart">
+      <button class="tryFree"> <span>Try it free 7 days</span> then<br>$20/mo. thereafter</button>
+      <form class="claimForm" action="">
+        <div class="inputGroup">
+          <input placeholder="First Name" class="mainInput" type="text" id="firstName">
+          <img src="./images/icon-error.svg" class="errorIcon" alt="" id="iconFN">
+          <div class="errorText" id="errorFN">Invalid name!</div>
+        </div>
+        <div class="inputGroup">
+          <input placeholder="Last Name" class="mainInput" type="text" id="lastName">
+          <img src="./images/icon-error.svg" class="errorIcon" alt="" id="iconLN">
+          <div class="errorText" id="errorLN">Invalid last name!</div>
+        </div>
+        <div class="inputGroup">
+          <input placeholder="Email Address" class="mainInput" type="email" id="email">
+          <img src="./images/icon-error.svg" class="errorIcon" alt="" id="iconMail">
+          <div class="errorText" id="errorMail">Invalid email address!</div>
+        </div>
+        <div class="inputGroup">
+          <input placeholder="Password" class="mainInput" type="password" id="password">
+          <img src="./images/icon-error.svg" class="errorIcon" alt="" id="iconPassword">
+          <div class="errorText" id="errorPassword">Invali password!</div>
+        </div>
+        <input class="claimButton" type="button" value="Claim your free trial" onclick="claimPress()">
+        <div class="claimFooter">
+          By clicking the button, you are agreeing to our <span class="ts">Terms and Services</span>
+        </div>
+      </form>
+      
+    </div>
+  </div>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Tony</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
