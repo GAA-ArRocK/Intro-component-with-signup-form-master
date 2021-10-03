@@ -42,6 +42,7 @@ body {
     background-color: var(--Red);
     background-image: url("./images/bg-intro-mobile.png");
     padding: 1.5rem;
+    min-width: 375px;
 }
 
 .topPart {
@@ -72,6 +73,10 @@ body {
     margin-bottom: 1.5rem;
     box-shadow: 0px 7px 1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+.tryFree p {
+    padding: 0 90px;
 }
 
 .tryFree span {
@@ -175,4 +180,25 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1200px) {
+
+    .mainBox {
+        display: flex;
+        flex-direction: row;
+        max-width: 1100px;
+        /* align-items: center;
+        justify-content: center; */
+    }
+
+    .topPart{
+        max-width: 500px;
+        text-align: left;
+        padding: 5rem;
+    }
+
+    .tryFree p {
+        padding: 0;
+    }
 }
